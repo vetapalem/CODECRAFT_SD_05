@@ -1,11 +1,5 @@
 # CODECRAFT_SD_05
-scraping
-modules
-below link should show how to install and how to automate code and you should install deriver like chrome ,firefox etc..
-https://selenium-python.readthedocs.io/
-
-https://pypi.org/project/selenium/
-# 🛒 E-commerce Web Scraper - README
+# 🛒 E-commerce Web Scraper 
 
 ## 📋 Project Overview
 A Python-based web scraping automation tool built with Selenium to extract product information from e-commerce websites. This tool automates the process of browsing, searching, and collecting product data for analysis.
@@ -36,9 +30,8 @@ A Python-based web scraping automation tool built with Selenium to extract produ
 ### Components
 ```
 web-scraper/
-├── scraper.py              # Main Python script
-├── chromedriver.exe        # Chrome WebDriver
-├── data.csv               # Scraped data output
+├── scrap.py              # Main Python script
+├── smaple.csv               # Scraped data output
 └── README.md              # Documentation
 ```
 
@@ -82,25 +75,26 @@ obj_serch.send_keys('your-product-search-query')
 The script uses specific selectors that may need adjustment:
 ```python
 # Search box selector
-"//input[@name='q']"
+"//input[@name='X']"
 
 # Page navigation buttons
-By.CLASS_NAME,'cn\+\+Ap'
+By.CLASS_NAME,'XXXXX'
 
 # Product container
-By.XPATH,'//*[@class="slAVV4"]'
+By.XPATH,'//*[@class="XXXX"]'
 
 # Product details selectors
-By.CLASS_NAME,'Nx9bqj'  # Price
-By.CLASS_NAME,'wjcEIp'  # Product name
-By.CLASS_NAME,'XQDdHH'  # Ratings
+By.CLASS_NAME,'XXXX'  # Price
+By.CLASS_NAME,'XXXX'  # Product name
+By.CLASS_NAME,'XXXXX'  # Ratings
 ```
+## note : 'x' place replace your identifinder
 
 ## 🚀 Usage Guide
 
 ### Basic Execution
 ```bash
-python scraper.py
+python scrap.py
 ```
 
 ### Step-by-Step Process
@@ -224,6 +218,16 @@ The script ensures:
 - [ ] **Price tracking** over time
 - [ ] **Competitor comparison** features
 
+### Code Enhancements
+```python
+# Add these features:
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+# Use explicit waits instead of time.sleep()
+wait = WebDriverWait(web_driver, 10)
+element = wait.until(EC.presence_of_element_located((By.ID, "id")))
+```
 
 ## 📚 Learning Resources
 
@@ -254,8 +258,8 @@ This tool is provided for educational and research purposes only. The author is 
 - [ ] Download ChromeDriver
 - [ ] Update script with target URL
 - [ ] Adjust selectors for target website
-- [ ] Run script (`python scrap.py`)
-- [ ] Check `sample.csv` for results
+- [ ] Run script (`python scraper.py`)
+- [ ] Check `data.csv` for results
 
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome! Feel free to check [issues page](#).
